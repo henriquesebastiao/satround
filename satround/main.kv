@@ -1,0 +1,37 @@
+ScreenManager:
+    InitScreen:
+
+<BaseMDNavigationItem>
+
+    MDNavigationItemIcon:
+        icon: root.icon
+
+    MDNavigationItemLabel:
+        text: root.text
+
+<InitScreen>:
+    name: 'init'
+    MDFloatLayout:
+        md_bg_color: self.theme_cls.backgroundColor
+        MDButton:
+            style: "tonal"
+            pos_hint: {'center_x': .5, 'center_y': .55}
+            on_release: app.open_file_manager()
+            on_release: root.add_decode_button()
+
+            MDButtonIcon:
+                icon: "plus"
+
+            MDButtonText:
+                text: 'Select audio'
+
+<DecodeButton>:
+    MDScreen:
+        id: decode_button
+        MDButton:
+            style: "elevated"
+            pos_hint: {'center_x': .5, 'center_y': .45}
+            on_release: app.decode_audio()
+
+            MDButtonText:
+                text: 'Decode'

@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "satround"
+version = "0.1.0"
+description = "APT analog signal decoder from NOAA satellites for Android written in Python."
+authors = ["Henrique Sebastião <contato@henriquesebastiao.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.1.2"
+matplotlib = "^3.9.2"
+scipy = "^1.14.1"
+kivy = {extras = ["full"], version = "^2.3.0"}
+kivymd2 = "^2.0.1"
+cython = "0.29.33"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.0"
+taskipy = "^1.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+ignore = ['PLR6201', 'PLR2004']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[tool.taskipy.tasks]
+lint = 'ruff check .; ruff check . --diff'
+format = 'ruff format .; ruff check . --fix'
+run = 'python satround/main.py'
