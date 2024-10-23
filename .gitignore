@@ -180,3 +180,8 @@ pyrightconfig.json
 ./*.jpeg
 ./*.jpg
 ./*.wav
+
+# Buildozer
+.buildozer/
+bin/
+.buildozer.spec.swp

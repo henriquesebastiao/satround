@@ -7,7 +7,7 @@ title = Satround
 package.name = satround
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = com.henriquesebastiao.satround
+package.domain = com.henriquesebastiao
 
 # (str) Source code where the main.py live
 source.dir = satround/.
@@ -37,7 +37,7 @@ version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,kivymd2,scipy,numpy,matplotlib
+requirements = python3,kivy,kivymd2,scipy,numpy,matplotlib,pillow,cython
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
