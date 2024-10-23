@@ -26,7 +26,7 @@ source.include_exts = py,png,jpg,kv,atlas
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
-#source.exclude_patterns = license,images/*/*.jpg
+source.exclude_patterns = apt.py
 
 # (str) Application versioning (method 1)
 #version = 0.1.0
@@ -36,8 +36,8 @@ version.regex = __version__ = ['"](.*)['"]
 version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,kivymd2,scipy,numpy,matplotlib,pillow,cython
+# comma separated e.g. requirements = scipy,numpy,matplotlib
+requirements = python3,kivy,kivymd2,pillow
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes

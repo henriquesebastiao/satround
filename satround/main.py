@@ -9,7 +9,7 @@ from kivymd.app import MDApp
 from kivymd.uix.filemanager import MDFileManager
 from kivymd.uix.snackbar import MDSnackbar, MDSnackbarText
 
-from satround.apt import decode
+# from satround.apt import decode
 
 __version__ = '0.1.0'
 Window.size = (360, 640)
@@ -81,9 +81,10 @@ class SatroundApp(MDApp):
                 self.file_manager.back()
         return True
 
-    def decode_audio(self):
+    @staticmethod
+    def decode_audio():
         try:
-            decode(self.selected_path)
+            # decode(self.selected_path)
             MDSnackbar(
                 MDSnackbarText(
                     text='Saved image!',
